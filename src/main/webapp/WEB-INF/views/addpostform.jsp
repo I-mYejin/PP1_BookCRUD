@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <h1>Add New Post</h1>
 <form action="addok" method="post">
     <table id = "edit">

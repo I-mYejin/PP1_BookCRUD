@@ -43,6 +43,7 @@ public class BoardDAO {
 		}
 	}
 
+
 	public BoardVO getBoard(int seq) {
 		BoardVO one = sqlSession.selectOne("Board.getBoard", seq);
 		return one;

@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <h1>Edit Form</h1>
 <form action="../editok" method="POST">
 <input type="hidden" name="seq" value="${u.seq}"/>
