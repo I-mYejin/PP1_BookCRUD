@@ -13,7 +13,7 @@
     }
 
     form {
-        margin-left: 500px;
+        margin-left: 580px;
         width: 50%;
         color: white;
     }
