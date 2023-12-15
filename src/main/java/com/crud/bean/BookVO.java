@@ -2,13 +2,16 @@ package com.crud.bean;
 
 import java.util.Date;
 
-public class BoardVO {
+public class BookVO {
 	private int seq;
 	private String Category;
 	private String title;
 	private String writer;
 	private String content;
 	private Date regdate;
+	private String state;
+	private String publish;
+	private String price;
 	private int cnt;
 	
 	public int getSeq() {
@@ -54,6 +57,30 @@ public class BoardVO {
 
 	public void setCategory(String category) {
 		Category = category;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getPublish() {
+		return publish;
+	}
+
+	public void setPublish(String publish) {
+		this.publish = publish;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
 	}
 }
 

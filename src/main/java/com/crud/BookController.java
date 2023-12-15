@@ -1,6 +1,6 @@
 package com.crud;
 
-import com.crud.bean.BoardVO;
+import com.crud.bean.BookVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping("/board")
-public class BoardController {
+@RequestMapping("/book")
+public class BookController {
 
     @Autowired
-    BoardService boardService;
+    BookService bookService;
 
     @GetMapping("/post")
-    public String boardList(Model model){
-        List<BoardVO> boardVOList = boardService.getBoardList();
-        model.addAttribute("list", boardVOList);
+    public String bookList(Model model){
+        List<BookVO> bookVOList = bookService.getBookList();
+        model.addAttribute("list", bookVOList);
         return "posts";
     }
     public String list(){
@@ -32,8 +32,8 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
-    public String addPost(BoardVO vo){
-        if(boardService.insertBoard(vo)==0)
+    public String addPost(BookVO vo){
+        if(bookService.insertBook(vo)==0)
             System.out.println("데이터 추가 실패");
         else
             System.out.println("데이터 추가 성공 !!!!");
@@ -42,13 +42,13 @@ public class BoardController {
 
     @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model){
-        BoardVO boardVO = boardService.getBoard(id);
-        model.addAttribute("u", boardVO);
+        BookVO bookVO = bookService.getBook(id);
+        model.addAttribute("u", bookVO);
         return "editform";
     }
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
-    public String editPostOK(BoardVO vo){
-        if(boardService.updateBoard(vo)==0)
+    public String editPostOK(BookVO vo){
+        if(bookService.updateBook(vo)==0)
             System.out.println("데이터 수정 실패");
         else
             System.out.println("데이터 추가 수정 !!!!");
@@ -57,7 +57,7 @@ public class BoardController {
 
     @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
     public String deletePostOk(@PathVariable("id") int id){
-        if(boardService.deleteBoard(id)==0)
+        if(bookService.deleteBook(id)==0)
             System.out.println("데이터 삭제 실패");
         else
             System.out.println("데이터 삭제 성공!!!");
@@ -65,8 +65,8 @@ public class BoardController {
     }
     @RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
     public String viewPost(@PathVariable("id") int id, Model model){
-        BoardVO boardVO = boardService.getBoard(id);
-        model.addAttribute("u", boardVO);
+        BookVO bookVO = bookService.getBook(id);
+        model.addAttribute("u", bookVO);
         return "view";
     }
 }

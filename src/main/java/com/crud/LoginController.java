@@ -1,6 +1,6 @@
 package com.crud;
 
-import com.crud.bean.BoardVO;
+import com.crud.bean.BookVO;
 import com.crud.bean.UserServiceImpl;
 import com.crud.bean.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class LoginController {
         if(loginvo != null){ //로그인 성공
             System.out.println("로그인 성공!");
             session.setAttribute("login", loginvo);
-            returnURL = "redirect:/board/post";
+            returnURL = "redirect:/book/post";
         }else {
             System.out.println("로그인 실패!");
             returnURL = "redirect:/login/login";
