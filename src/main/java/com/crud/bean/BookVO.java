@@ -11,7 +11,7 @@ public class BookVO {
 	private Date regdate;
 	private String state;
 	private String publish;
-	private String price;
+	private int price;
 	private int cnt;
 	
 	public int getSeq() {
@@ -75,11 +75,11 @@ public class BookVO {
 		this.publish = publish;
 	}
 
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 }

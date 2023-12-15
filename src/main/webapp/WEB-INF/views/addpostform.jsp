@@ -6,16 +6,24 @@
     <meta charset="UTF-8">
     <title>Insert title here</title>
     <style>
-    body {background-color: white; color: black; text-align: center;}
-    button{ background-color: #ffffff; color: #000000;font-size:15px;}
+        body {background-color: black; color: white; text-align: center; }
+        button{ background-color: #000000; color: #59fd37;font-size:20px;}
+        table {
+            text-align: center;
+        }
+        form {
+            margin-left: 500px;
+            width: 50%;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
 
 <h1>독서 감상문 추가하기</h1>
-<form action="addok" method="post">
-    <table id = "edit">
+<form action="addok" method="post" style="text-align: center;">
+    <table id = "edit" style="text-align: center;" >
         <tr><td>카테고리:</td><td><input type="text" name="category"/></td></tr>
         <tr><td>책 제목:</td><td><input type="text" name="title"/></td></tr>
         <tr><td>작가 :</td><td><input type="text" name="writer"/></td></tr>

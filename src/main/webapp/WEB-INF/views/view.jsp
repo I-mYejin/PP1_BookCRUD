@@ -13,7 +13,7 @@
     }
 
     form {
-        margin-left: 470px;
+        margin-left: 500px;
         width: 50%;
         color: white;
     }
@@ -24,7 +24,7 @@
 </head>
 <body>
 
-<h1>상세보기</h1> <br>
+<h1>상세보기</h1> <br><br>
 <form action="../book/view/${u.seq}" method="POST" style="text-align: center;">
     <input type="hidden" name="seq" value="${u.seq}"/>
     <table id="view" >

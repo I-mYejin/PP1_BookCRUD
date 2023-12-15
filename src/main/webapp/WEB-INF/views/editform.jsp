@@ -53,8 +53,14 @@
    <td><input type="text" name="publish" value="${u.publish}" /></td>
   </tr>
   <tr>
-   <td>추천(상,중,하) :</td>
-   <td><input type="text" name="state" value="${u.state}" /></td>
+   <td>추천(상,중,하):</td>
+   <td>
+    <select name="state">
+     <option value="상">상</option>
+     <option value="중">중</option>
+     <option value="하">하</option>
+    </select>
+   </td>
   </tr>
   <tr>
    <td>책 가격 :</td>

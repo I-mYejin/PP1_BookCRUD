@@ -38,7 +38,7 @@ public class BookDAO {
 			vo.setTitle(rs.getString("title"));
 			vo.setPublish(rs.getString("publish"));
 			vo.setState(rs.getString("state"));
-			vo.setPrice(rs.getString("price"));
+			vo.setPrice(rs.getInt("price"));
 			vo.setContent(rs.getString("content"));
 			vo.setWriter(rs.getString("writer"));
 			vo.setCategory(rs.getString("category"));
