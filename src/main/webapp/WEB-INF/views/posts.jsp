@@ -39,7 +39,8 @@
 </head>
 <body>
 <index style="text-align: center;">
-<h1>독서 게시판</h1>
+
+	<h1>독서 게시판</h1>
 
 <form method="post" action="../login/logout" style="text-align: right;">
 	<button type='submit'>logout</button>
