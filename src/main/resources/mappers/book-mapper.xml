@@ -4,13 +4,13 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Book">
     <insert id="insertBook">
-        insert into BOOK (category,title, writer,content)
+        insert into BOOK (category,title, writer,content, state, publish, price)
         values
-        (#{category}, #{title}, #{writer}, #{content})
+        (#{category}, #{title}, #{writer}, #{content}, #{state}, #{publish}, #{price})
     </insert>
     <update id="updateBook">
         update BOOK
-        set title=#{title}, content=#{content}, writer=#{writer}, category = #{category}
+        set title=#{title}, content=#{content}, writer=#{writer}, category = #{category}, state = #{state}, publish = #{publish}, price = #{price}
         where seq=#{seq}
     </update>
     <delete id="deleteBook">
